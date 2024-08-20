@@ -240,7 +240,7 @@ hostname
 
 7. **Submit the script** to the job queue:
    ```sh
-   [alice@wynton ~/tests]$ qsub -cwd -j yes hello_world.sh
+   [alice@wynton ~/tests]$ qsub hello_world.sh
    Your job 201 ("hello_world") has been submitted
    ```
 
