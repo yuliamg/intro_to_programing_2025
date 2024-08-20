@@ -18,7 +18,7 @@
   - [File System Good Practices](#file-system-good-practices)
 
 ### Credit
-Most of the content from this page was cobbled together using content on [Wynton's website](https://wynton.ucsf.edu/hpc/index.html)+ some original writing and rewriting by Zack Mawaldi and ChatGPT. The person who did the cobbling is Zack.
+Most of the content from this page was cobbled together using content on [Wynton's website](https://wynton.ucsf.edu/hpc/index.html) + some original writing and rewriting by Zack Mawaldi and ChatGPT. The person who did the cobbling is Zack.
 
 ### Helpful Resources
 - [Wynton Website](https://wynton.ucsf.edu/hpc/index.html)
