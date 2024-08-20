@@ -194,7 +194,7 @@ Now that you're familiar with basic commands, let us set up and run a simple job
      date
      ```
    - Save and exit the editor (`Ctrl+X`, then `Y`, then `Enter` if using `nano`).
-   - Side-note: Of course, there are a plethora of terminal text editor (emacs, vim, neovim, ...). Choose wisely! Obligatory xkcd:
+   - Side-note: Of course, there are a plethora of terminal text editor other than `nano`. Notable ones are emacs, vi, vim, neovim, etc. Choose wisely! Obligatory xkcd:
 
 
 <div align="center">
