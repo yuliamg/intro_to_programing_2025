@@ -194,7 +194,7 @@ Now that you're familiar with basic commands, let us set up and run a simple job
      date
      ```
    - Save and exit the editor (`Ctrl+X`, then `Y`, then `Enter` if using `nano`).
-   - Side-note: Of course, there are a plethora of text editor (emacs, vi, vim, ...). Of course, *real* programmers use BUTTERFLIES!
+   - Side-note: Of course, there are a plethora of terminal text editor (emacs, vim, neovim, ...). Choose wisely! Obligatory xkcd:
 
 ![Real Programmers](https://imgs.xkcd.com/comics/real_programmers.png)
 
