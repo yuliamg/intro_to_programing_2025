@@ -238,13 +238,13 @@ hostname
 
 #### Step 4: Submit the Script as a Job
 
-7. **Submit the script** to the job queue:
+7. **Submit the script** to the job queue using `qsub`:
    ```sh
    [alice@wynton ~/tests]$ qsub hello_world.sh
    Your job 201 ("hello_world") has been submitted
    ```
 
-8. **Check the job status**:
+8. **Check the job status** using `qstat`:
    ```sh
    [alice@wynton ~/tests]$ qstat
    ```
