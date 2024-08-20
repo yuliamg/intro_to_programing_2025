@@ -1,20 +1,58 @@
-Here's the cleaned-up and reformatted version of your Wynton tutorial:
+# Day 0: Introduction to Wynton
 
----
+### Outline
+- [Day 0: Introduction to Wynton](#day-0-introduction-to-wynton)
+  - [Helpful Resources](#helpful-resources)
+  - [What is Wynton?](#what-is-wynton)
+  - [Getting Started: Creating a Wynton Account](#getting-started-creating-a-wynton-account)
+  - [Accessing Wynton](#accessing-wynton)
+  - [Signing into Wynton](#signing-into-wynton)
+- [Running Your First Job: 'Hello World' on the Wynton Cluster](#running-your-first-job-hello-world-on-the-wynton-cluster)
+  - [Basics of Terminal Use](#basics-of-terminal-use)
+  - [Running a 'Hello World' Job](#running-a-hello-world-job)
+- [Beyond the Basics](#beyond-the-basics)
+  - [Overview of Wynton Nodes](#overview-of-wynton-nodes)
+  - [Wynton Job Queues](#wynton-job-queues)
+  - [Using Scratch Storage](#using-scratch-storage)
+  - [Additional Info / Tips](#additional-info--tips)
+  - [File System Good Practices](#file-system-good-practices)
 
-## Day 0: Introduction to Wynton
+### Credit
+Most of the content from this page was cobbled together using content on [Wynton's website](https://wynton.ucsf.edu/hpc/index.html), with addition of some original writing and rewriting by Zack Mawaldi and ChatGPT. The person who did the cobbling is Zack.
 
 ### Helpful Resources
 - [Wynton Website](https://wynton.ucsf.edu/hpc/index.html)
+- **Wynton Staff Support**:
+  - Email: [support@wynton.ucsf.edu](mailto:support@wynton.ucsf.edu)
+  - Join the [Wynton Slack](https://join.slack.com/t/ucsf-wynton/signup)
 
 ### What is Wynton?
 
 Wynton is a **High Performance Computing (HPC) cluster** composed of many interconnected computers (nodes) that collaborate to allow users to execute programs and process large datasets. It is commonly used in research for simulations, analyzing big datasets, or performing tasks that would be too time-consuming on a regular computer. Wynton enables you to leverage the combined power of the entire cluster, making it possible to handle more intensive computational tasks.
 
 ### Getting Started: Creating a Wynton Account
-- [Request or Update an Account](https://wynton.ucsf.edu/hpc/about/join.html#request-or-update-an-account)
-  - _(It's ideal to complete this on Day 1)_
+- [Request or Update an Account](https://wynton.ucsf.edu/hpc/about/join.html#request-or-update-an-account) _(Ideally done Day 1 of on-boarding)
 
+If account created successfully, you should've recived an email that looked liked this:
+```
+Dear zack,  
+  
+Your Wynton account has now been created.  Your account is 'zack' and   
+your temporary password is '[REDACTED]'.  Please note that you should immediately   
+go to https://www.cgl.ucsf.edu/admin/chpass.py to give yourself  
+a permanent password.  Your temporary password will expire in one week.  
+  
+Also note that you are required to adhere to the Wynton HPC User Agreement  
+https://wynton.ucsf.edu/hpc/about/user-agreement.html.  Information  
+about Wynton is available at: https://wynton.ucsf.edu/hpc/ and information  
+about getting help is available at: https://wynton.ucsf.edu/hpc/support/index.html
+  
+Wynton admins
+```
+
+Please follow the `https://www.cgl.ucsf.edu/admin/chpass.py` link to reset your password and to change it into a permanent, secure, and ideally memorable one.
+
+Now that we have a permanent password, let us access Wynton!
 ### Accessing Wynton
 
 Wynton is only accessible via the ***terminal***.
@@ -73,6 +111,7 @@ reserve the right to kill any long running processes on these nodes
 without warning. Use a development node for prototyping.
 [alice@log1 ~]$
 ```
+
 
 </details>
 
@@ -213,28 +252,26 @@ hostname
 
 Congratulations! You've successfully submitted and run a simple 'Hello World' job on the Wynton cluster.
 
-## Additional Information
-
-### Seeking Help
-
-- **Wynton Support**:
-  - Email: [support@wynton.ucsf.edu](mailto:support@wynton.ucsf.edu)
-  - [Wynton Slack](https://join.slack.com/t/ucsf-wynton
-
-/signup)
+## Beyond the basics
 
 ### Overview of Wynton Nodes
+Sign into login, data transfer, and development nodes for logging in, transferring data, or prototyping / testing code. Simply `ssh log1@wynton...` or `ssh dt1@`. For development, you can`ssh dev1@` but you have to be logged into Wynton first. Here's a quick overview of all of Wynton's nodes:
 
-| Feature                                    | Login Nodes                                                         | Transfer Nodes                                         | Development Nodes                                                                                                                            | Compute Nodes                                 |
-| ------------------------------------------ | ------------------------------------------------------------------- | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
-| **Hostname**                               | `log[1-2].wynton.ucsf.edu`                                          | `dt[1-2].wynton.ucsf.edu`                              | `dev[1-3]`, `gpudev1`                                                                                                                        | …                                             |
-| **Purpose**                                | *Submit and query jobs. SSH to development nodes. File management.* | *Fast in- & outbound file transfers. File management.* | *Compile and install software. Prototype and test job scripts. Submit and query jobs. Version control (clone, pull, push). File management.* | *Running short and long-running job scripts.* |
+| Feature                                        | Login Nodes                                                         | Transfer Nodes                                         | Development Nodes                                                                                                                            | Compute Nodes                                 |
+| ---------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| **Hostname**                                   | `log[1-2].wynton.ucsf.edu`                                          | `dt[1-2].wynton.ucsf.edu`                              | `dev[1-3]`, `gpudev1`                                                                                                                        | …                                             |
+| **Purpose**                                    | *Submit and query jobs. SSH to development nodes. File management.* | *Fast in- & outbound file transfers. File management.* | *Compile and install software. Prototype and test job scripts. Submit and query jobs. Version control (clone, pull, push). File management.* | *Running short and long-running job scripts.* |
 | **Accessible via SSH from outside of cluster** | ✓ (2FA if outside of UCSF)                                          | ✓ (2FA if outside of UCSF)                             | no                                                                                                                                           | no                                            |
-| **Network speed**                          | 1 Gbps                                                              | 10 Gbps                                                | 1 Gbps                                                                                                                                       | 1,10,40 Gbps                                  |
-| **Core software**                          | Minimal                                                             | Minimal                                                | Same as compute nodes + compilers and source-code packages                                                                                   | Rocky 8 packages                              |
-| **Job submission**                         | ✓                                                                   | no                                                     | ✓                                                                                                                                            | ✓                                             |
+| **Network speed**                              | 1 Gbps                                                              | 10 Gbps                                                | 1 Gbps                                                                                                                                       | 1,10,40 Gbps                                  |
+| **Core software**                              | Minimal                                                             | Minimal                                                | Same as compute nodes + compilers and source-code packages                                                                                   | Rocky 8 packages                              |
+| **Job submission**                             | ✓                                                                   | no                                                     | ✓                                                                                                                                            | ✓                                             |
 
 ### Wynton Job Queues
+The cluster provides different queues that each is optimized for a different purpose. Some queues are faster because they are limited to 30min run times (`short.q`). Others are slower, but ensure that your job is allocated a GPU (`gpu.q`). 
+
+To specify a queue, use the flag `-q {queue_name_here}` when submitting a job, e.g., `qsub -q long.q my_submission_script.sh`.
+
+Here's a quick summary:
 
 | Queue Name | Maximum Runtime                                                        | Process Priority | Availability                                                       | Quota                                                                                    | Purpose                                                                      |
 | ---------- | ---------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
@@ -245,13 +282,12 @@ Congratulations! You've successfully submitted and run a simple 'Hello World' jo
 | **4gpu.q**     | 2 weeks (336 hours) (contributors) or 2 hours (non-contributors)       | 0 (highest)      | Specific "All-4-GPU" nodes                                         | Unlimited                                                                                | Software needing to utilize all four GPUs on the node                        |
 | **ondemand.q** | 2 weeks (336 hours)                                                    | 0 (highest)      | Institutionally purchased nodes                                    | Available upon application and approval                                                  | Scheduled high-priority computing needs or temporary paid priority access    |
 
-To specify a queue, use the flag `-q {queue_name_here}` when submitting a job, e.g., `qsub -q long.q my_script`.
-
 ### Using Scratch Storage
 
-- All nodes (compute and development) have local storage mounted as `/scratch`. The `/scratch` storage is fast—faster than system-wide storage such as home folders and `/wynton/scratch`—making it ideal for holding intermediate data files. Using local `/scratch` reduces the load on system-wide storage and the local network, benefiting everyone.
+- All nodes (compute and development) have local storage mounted as `/scratch`. The `/scratch` storage is faster than system-wide storage such as home folders and `/wynton/scratch`, making it ideal for holding intermediate data files. Using local `/scratch` reduces the load on system-wide storage and the local network, benefiting everyone.
+- As the name implies, 
 
-### Additional Tips
+### Additional Info / Tips
 
 - **Email Notifications**: Get email notifications for job status by adding the flag `-m bea` to your `qsub` command, e.g., `qsub -m bea`.
 - **Disk Quota**: Check your disk quota with:
@@ -260,6 +296,7 @@ To specify a queue, use the flag `-q {queue_name_here}` when submitting a job, e
   ```
   - Note: The displayed quota is double the actual size. For example, if it shows 1 TB, you have 500 GB available. [See more](https://wynton.ucsf.edu/hpc/howto/storage-size.html#user-disk-quota-on-wyntonhome-or-wyntonprotectedhome).
 
----
-
-This revised tutorial now presents a clear, well-structured guide to help beginners navigate Wynton and successfully run their first job.
+### File System Good Practices (don't be *the* person who breaks Wynton)
+- **Distribute Files:** Spread out files across multiple directories, including SGE output and error files.
+- **Prefer Larger Files:** Use fewer, larger files rather than many small ones.
+- **Limit Directory I/O:** Keep the number of reads and writes to a single directory reasonable.
