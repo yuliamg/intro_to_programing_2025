@@ -1,8 +1,9 @@
 # Day 0: Introduction to Wynton
+---
+Credit: Most of the information from this page was cobbled together using content from [Wynton's website](https://wynton.ucsf.edu/hpc/index.html) + some writing and rewriting by Zack Mawaldi and ChatGPT. The person who did the cobbling was Zack.
 
 ### Outline
 - [Day 0: Introduction to Wynton](#day-0-introduction-to-wynton)
-  - [Helpful Resources](#helpful-resources)
   - [What is Wynton?](#what-is-wynton)
   - [Getting Started: Creating a Wynton Account](#getting-started-creating-a-wynton-account)
   - [Accessing Wynton](#accessing-wynton)
@@ -15,17 +16,8 @@
   - [Wynton Job Queues](#wynton-job-queues)
   - [Using Scratch Storage](#using-scratch-storage)
   - [Additional Info / Tips](#additional-info--tips)
-  - [File System Good Practices](#file-system-good-practices)
-
-### Credit
-Most of the content from this page was cobbled together using content on [Wynton's website](https://wynton.ucsf.edu/hpc/index.html) + some original writing and rewriting by Zack Mawaldi and ChatGPT. The person who did the cobbling is Zack.
-
-### Helpful Resources
-- [Wynton Website](https://wynton.ucsf.edu/hpc/index.html)
-- **Wynton Staff Support**:
-  - Email: [support@wynton.ucsf.edu](mailto:support@wynton.ucsf.edu)
-  - Join the [Wynton Slack](https://join.slack.com/t/ucsf-wynton/signup)
-
+- [Need Help?](#Need-Help?)
+---
 ### What is Wynton?
 
 Wynton is a **High Performance Computing (HPC) cluster** composed of many interconnected computers (nodes) that collaborate to allow users to execute programs and process large datasets. It is commonly used in research for simulations, analyzing big datasets, or performing tasks that would be too time-consuming on a regular computer. Wynton enables you to leverage the combined power of the entire cluster, making it possible to handle more intensive computational tasks.
@@ -114,7 +106,7 @@ without warning. Use a development node for prototyping.
 
 
 </details>
-
+---
 ## Running Your First Job: 'Hello World' on the Wynton Cluster
 
 The Wynton cluster consists of a large number of compute nodes ready to execute users' tasks (jobs). Since all compute nodes are configured similarly, it doesn’t matter which node your analysis runs on. To manage resources and ensure fair use, Wynton uses a job scheduler, which places your jobs in a queue and allocates resources as they become available. Wynton's scheduler is called [Sun Grid Engine](http://google.com/search?q=Sun+Grid+Engine).
@@ -309,7 +301,15 @@ Here's a quick summary:
   ```
   - Note: The displayed quota is double the actual size. For example, if it shows 1 TB, you have 500 GB available. [See more](https://wynton.ucsf.edu/hpc/howto/storage-size.html#user-disk-quota-on-wyntonhome-or-wyntonprotectedhome).
 
-### File System Good Practices (don't be *the* person who breaks Wynton)
+### Good File System Practices (don't be *the* person who breaks Wynton)
 - **Distribute Files:** Spread out files across multiple directories, including SGE output and error files.
 - **Prefer Larger Files:** Use fewer, larger files rather than many small ones.
 - **Limit Directory I/O:** Keep the number of reads and writes to a single directory reasonable.
+
+---
+
+## Need Help?
+- [Wynton Website](https://wynton.ucsf.edu/hpc/index.html)
+- **Wynton Staff Support**:
+  - Email: [support@wynton.ucsf.edu](mailto:support@wynton.ucsf.edu)
+  - Join the [Wynton Slack](https://join.slack.com/t/ucsf-wynton/signup)
