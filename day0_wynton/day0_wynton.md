@@ -196,7 +196,9 @@ Now that you're familiar with basic commands, let us set up and run a simple job
    - Save and exit the editor (`Ctrl+X`, then `Y`, then `Enter` if using `nano`).
    - Side-note: Of course, there are a plethora of terminal text editor (emacs, vim, neovim, ...). Choose wisely! Obligatory xkcd:
 
-![Real Programmers](https://imgs.xkcd.com/comics/real_programmers.png)
+<div align="center"> 
+<img src="https://imgs.xkcd.com/comics/real_programmers.png"alt="Real Programmers"/> 
+</div>
 
 For future reference, here's a more detailed sample submission script provided by Wynton:
 
