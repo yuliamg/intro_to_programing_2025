@@ -44,7 +44,7 @@ Wynton admins
 
 Please follow the `https://www.cgl.ucsf.edu/admin/chpass.py` link to reset your password. Change it into a permanent, secure, and ideally memorable password.
 
-Now that we have a an account set up, let us access Wynton!
+Now that we have an account set up, let us access Wynton!
 ### Accessing Wynton
 
 Wynton is only accessible via the ***terminal***.
@@ -130,6 +130,7 @@ Before running jobs on Wynton, familiarize yourself with some basic terminal com
   [alice@wynton ~]$ ls
   Documents  Downloads
   ```
+- (Note: `Documents  Downloads` is an example output. On Wynton, `~/` will most likely be empty.)
 
 #### 3. `mkdir`: Make Directory
 - **Creates a new directory**.
@@ -159,7 +160,7 @@ Before running jobs on Wynton, familiarize yourself with some basic terminal com
 
 ### Running a 'Hello World' Job
 
-Now that you're familiar with basic commands by setting up and running a simple job on Wynton!
+Now that you're familiar with basic commands, let us set up and run a simple job!
 
 #### Step 1: Create a Script
 
@@ -168,7 +169,7 @@ Now that you're familiar with basic commands by setting up and running a simple 
    [alice@wynton ~]$ cd ~
    ```
 
-2. **Create a directory** to store your script:
+2. **Create a directory** to store your script (if not already created):
    ```sh
    [alice@wynton ~]$ mkdir tests
    ```
@@ -193,6 +194,9 @@ Now that you're familiar with basic commands by setting up and running a simple 
      date
      ```
    - Save and exit the editor (`Ctrl+X`, then `Y`, then `Enter` if using `nano`).
+   - Side-note: Of course, there are a plethora of text editor (emacs, vi, vim, ...). Of course, *real* programmers use BUTTERFLIES!
+
+![Real Programmers](https://imgs.xkcd.com/comics/real_programmers.png)
 
 For future reference, here's a more detailed sample submission script provided by Wynton:
 
