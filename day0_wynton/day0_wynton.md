@@ -1,5 +1,5 @@
 # Day 0: Introduction to Wynton
----
+
 Credit: Most of the information from this page was cobbled together using content from [Wynton's website](https://wynton.ucsf.edu/hpc/index.html) + some writing and rewriting by Zack Mawaldi and ChatGPT. The person who did the cobbling was Zack.
 
 ### Outline
@@ -106,7 +106,9 @@ without warning. Use a development node for prototyping.
 
 
 </details>
+
 ---
+
 ## Running Your First Job: 'Hello World' on the Wynton Cluster
 
 The Wynton cluster consists of a large number of compute nodes ready to execute users' tasks (jobs). Since all compute nodes are configured similarly, it doesn’t matter which node your analysis runs on. To manage resources and ensure fair use, Wynton uses a job scheduler, which places your jobs in a queue and allocates resources as they become available. Wynton's scheduler is called [Sun Grid Engine](http://google.com/search?q=Sun+Grid+Engine).
