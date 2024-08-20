@@ -65,7 +65,7 @@ The **terminal** is a text-based interface that allows you to interact directly 
 ### Signing into Wynton
 - Open the terminal:
   - On Mac: Use `command ⌘ + space ␣` to open Spotlight, then type "terminal" to open it.
-  - _(Note: A Windows option should be added)_
+  - (This tutorial assumes you're using Mac or Linux. See [WSL](http://google.com/search?q=Windows+Subsystem+for+Linux) for Windows users)
 - In the terminal, type:
   ```sh
   ssh your_name@log1.wynton.ucsf.edu
@@ -117,7 +117,7 @@ without warning. Use a development node for prototyping.
 
 ## Running Your First Job: 'Hello World' on the Wynton Cluster
 
-The Wynton cluster consists of a large number of compute nodes ready to execute users' tasks (jobs). Since all compute nodes are configured similarly, it doesn’t matter which node your analysis runs on. To manage resources and ensure fair use, Wynton uses a job scheduler, which places your jobs in a queue and allocates resources as they become available.
+The Wynton cluster consists of a large number of compute nodes ready to execute users' tasks (jobs). Since all compute nodes are configured similarly, it doesn’t matter which node your analysis runs on. To manage resources and ensure fair use, Wynton uses a job scheduler, which places your jobs in a queue and allocates resources as they become available. Wynton's scheduler is called [Sun Grid Engine](http://google.com/search?q=Sun+Grid+Engine).
 
 ### Basics of Terminal Use
 
@@ -134,25 +134,38 @@ Before running jobs on Wynton, familiarize yourself with some basic terminal com
 - **Lists files and directories** in the current directory.
   ```sh
   [alice@wynton ~]$ ls
-  Documents  Downloads  tests  hello_world
+  Documents  Downloads
   ```
 
-#### 3. `cd`: Change Directory
+#### 3. `mkdir`: Make Directory
+- **Creates a new directory**.
+  ```sh
+  [alice@wynton ~]$ mkdir tests
+
+  [alice@wynton ~]$ ls
+  Documents  Downloads  tests
+  ```
+
+#### 4. `cd`: Change Directory
 - **Moves between directories**.
   ```sh
   [alice@wynton ~]$ cd tests
   [alice@wynton ~/tests]$
-  ```
 
-#### 4. `mkdir`: Make Directory
-- **Creates a new directory**.
-  ```sh
-  [alice@wynton ~]$ mkdir tests
+  [alice@wynton ~/tests]$ pwd
+  /wynton/home/rotation/alice/tests
+
+  [alice@wynton ~]$ cd ..
+  [alice@wynton ~]$ pwd
+  /wynton/home/rotation/alice
+  
+  [alice@wynton ~]$ ls
+  Documents  Downloads  tests
   ```
 
 ### Running a 'Hello World' Job
 
-Now that you're familiar with basic commands, let's run a simple job on Wynton.
+Now that you're familiar with basic commands by setting up and running a simple job on Wynton!
 
 #### Step 1: Create a Script
 
@@ -173,7 +186,7 @@ Now that you're familiar with basic commands, let's run a simple job on Wynton.
 
 4. **Create a script** called `hello_world`:
    ```sh
-   [alice@wynton ~/tests]$ nano hello_world
+   [alice@wynton ~/tests]$ nano hello_world.sh
    ```
    - Use `nano` (a terminal-based text editor) to enter the following script:
      ```sh
@@ -209,14 +222,14 @@ hostname
 
 5. **Change the file permissions** to make it executable:
    ```sh
-   [alice@wynton ~/tests]$ chmod ugo+x hello_world
+   [alice@wynton ~/tests]$ chmod ugo+x hello_world.sh
    ```
 
 #### Step 3: Run the Script Directly
 
 6. **Test the script** by running it directly (optional but recommended):
    ```sh
-   [alice@wynton ~/tests]$ ./hello_world
+   [alice@wynton ~/tests]$ ./hello_world.sh
    Hello world, I am running on node wynton
    Mon Aug 19 16:31:29 PDT 2024
    ```
@@ -225,7 +238,7 @@ hostname
 
 7. **Submit the script** to the job queue:
    ```sh
-   [alice@wynton ~/tests]$ qsub -cwd -j yes hello_world
+   [alice@wynton ~/tests]$ qsub -cwd -j yes hello_world.sh
    Your job 201 ("hello_world") has been submitted
    ```
 
@@ -240,7 +253,7 @@ hostname
 9. **Locate the output** in the current directory:
    ```sh
    [alice@wynton ~/tests]$ ls
-   hello_world  hello_world.o201
+   hello_world.sh  hello_world.o201
    ```
 
 10. **View the job output**:
@@ -255,7 +268,7 @@ Congratulations! You've successfully submitted and run a simple 'Hello World' jo
 ## Beyond the basics
 
 ### Overview of Wynton Nodes
-Sign into login, data transfer, and development nodes for logging in, transferring data, or prototyping / testing code. Simply `ssh log1@wynton...` or `ssh dt1@`. For development, you can`ssh dev1@` but you have to be logged into Wynton first. Here's a quick overview of all of Wynton's nodes:
+Sign into login, data transfer, and development nodes for logging in, transferring data, or prototyping / testing code. Simply `ssh log1@wynton.ucsf.edu` or `ssh dt1@wynton.ucsf.edu`. For development, you can`ssh dev1@wynton.ucsf.edu` but you have to be logged into Wynton first. Here's a quick overview of all of Wynton's nodes:
 
 | Feature                                        | Login Nodes                                                         | Transfer Nodes                                         | Development Nodes                                                                                                                            | Compute Nodes                                 |
 | ---------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
@@ -285,7 +298,7 @@ Here's a quick summary:
 ### Using Scratch Storage
 
 - All nodes (compute and development) have local storage mounted as `/scratch`. The `/scratch` storage is faster than system-wide storage such as home folders and `/wynton/scratch`, making it ideal for holding intermediate data files. Using local `/scratch` reduces the load on system-wide storage and the local network, benefiting everyone.
-- As the name implies, 
+- As the name implies, `/scratch` is susceptible to deletion without warning by Wynton admin. Do not hold precious data on it.
 
 ### Additional Info / Tips
 
