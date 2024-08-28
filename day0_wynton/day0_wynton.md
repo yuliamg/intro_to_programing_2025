@@ -115,7 +115,7 @@ without warning. Use a development node for prototyping.
 
 ## Running Your First Job: 'Hello World' on the Wynton Cluster
 
-The Wynton cluster consists of a large number of compute nodes ready to execute users' tasks (jobs). Since all compute nodes are configured similarly, it doesn’t matter which node your analysis runs on. To manage resources and ensure fair use, Wynton uses a job scheduler, which places your jobs in a queue and allocates resources as they become available. Wynton's scheduler is called [Sun Grid Engine](http://google.com/search?q=Sun+Grid+Engine).
+The Wynton cluster consists of a large number of compute nodes ready to execute users' tasks (jobs). Since all compute nodes are configured similarly, it doesn’t matter which node your analysis runs on. To manage resources and ensure fair use, Wynton uses a job scheduler, which places your jobs in a queue and allocates resources as they become available. Wynton's scheduler is called [Son of Grid Engine](https://www.google.com/search?q=son+of+grid+engine).
 
 ### Basics of Terminal Use
 
@@ -356,6 +356,7 @@ Here's a quick summary:
   beegfs-ctl --getquota --storagepoolid=11 --uid "$USER"
   ```
   - Note: The displayed quota is double the actual size. For example, if it shows 1 TB, you have 500 GB available. [See more](https://wynton.ucsf.edu/hpc/howto/storage-size.html#user-disk-quota-on-wyntonhome-or-wyntonprotectedhome).
+- There are some ways to automatically sign into nodes without typing in your password every time. You can also log directly into `dev` nodes without first going to a login node. [This tutorial](https://wynton.ucsf.edu/hpc/howto/log-in-without-pwd.html) on the Wynton website will help.
 
 ### Good File System Practices (don't be *the* person who breaks Wynton)
 - **Distribute Files:** Spread out files across multiple directories, including SGE output and error files.
