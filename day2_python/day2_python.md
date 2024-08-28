@@ -58,7 +58,7 @@ You can comment out code if you don’t want it to run:
 ### Assignments
 1. Write an expression to find out how many seconds are in a 365-day year.
 2. The Earth is approximately a sphere with a radius of 6370 km. Calculate its volume in cubic meters.
-3. Solve the following expression: \( \frac{1}{2} + \frac{\frac{1}{3}}{\frac{1}{4} + \frac{1}{5}} \).
+3. Solve the following expression: $\frac{1}{2} + \frac{\frac{1}{3}}{\frac{1}{4} + \frac{1}{5}}$.
 
 ---
 
