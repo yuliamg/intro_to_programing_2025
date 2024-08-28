@@ -1,6 +1,9 @@
 # Day 0: Introduction to Wynton
 
-Credit: Most of the information from this page was cobbled together using content from [Wynton's website](https://wynton.ucsf.edu/hpc/index.html) + some writing and rewriting by Zack Mawaldi and ChatGPT. The person who did the cobbling was Zack.
+This tutorial is designed to familiarize UCSF 1st year Biophysics students to Wynton High Performance Computing (HPC) cluster. It covers everything from creating an account to running your first job, providing the backbone knowledge required to efficiently use Wynton’s resources. By the end, you'll be comfortable navigating Wynton and setting up + submitting jobs.
+
+
+Credit: Most of the information from this page was cobbled together using content from [Wynton's website](https://wynton.ucsf.edu/hpc/index.html) + some writing and rewriting by Zack Mawaldi and ChatGPT. The person who did the cobbling was Zack. Special thanks to Karson Chrispens for feedback and contribution.
 
 ### Outline
 - [Day 0: Introduction to Wynton](#day-0-introduction-to-wynton)
@@ -11,6 +14,7 @@ Credit: Most of the information from this page was cobbled together using conten
 - [Running Your First Job: 'Hello World' on the Wynton Cluster](#running-your-first-job-hello-world-on-the-wynton-cluster)
   - [Basics of Terminal Use](#basics-of-terminal-use)
   - [Running a 'Hello World' Job](#running-a-hello-world-job)
+  - [Wynton ↔ Your Computer File Transfer](#files-transfer-between-your-computer-and-wynton-with-scp)
 - [Beyond the Basics](#beyond-the-basics)
   - [Overview of Wynton Nodes](#overview-of-wynton-nodes)
   - [Wynton Job Queues](#wynton-job-queues)
@@ -266,6 +270,48 @@ hostname
     ```
 
 Congratulations! You've successfully submitted and run a simple 'Hello World' job on the Wynton cluster.
+
+Lastly, a lot of times you will need to copy job output files over to your local machine. We generally do this to look at and analyze the results of our jobs.
+
+### Files Transfer Between Your Computer and Wynton with **`scp`**
+
+The `scp` (secure copy) command allows you to securely transfer files between your machine and Wynton via SSH.
+
+#### Wynton → Local Machine
+
+To copy a file from Wynton to your local machine, on your local machine, type:
+
+```sh
+scp zack@dt1.wynton.ucsf.edu:/wynton/home/zack/tests/hello_world.o201 /path/to/local/destination/
+```
+
+Replace `zack` with your Wynton username, `/wynton/home/zack/hello_world.o201` of the path of the file on Wynton, and `/path/to/local/destination/` with the path where you want the file to be saved on your local machine. (Note: we are using the data transfer node, `dt1`, rather than `log1` for moving the file. This isn't necessary but is recommended. More on this below.)
+
+
+#### Local Machine → Wynton
+
+On your local machine:
+
+```sh
+scp /path/to/local/file zack@dt1.wynton.ucsf.edu:/wynton/home/zack/
+```
+
+Replace `/path/to/local/file` with the path to the file on your local machine, and `zack` with your Wynton username. `/wynton/home/zack/` is where the file will land.
+
+
+#### Copying Entire Directories
+
+To copy entire directories, use the recursive `-r` option with `scp`:
+
+```sh
+# Wynton to your local machine:
+scp -r zack@dt1.wynton.ucsf.edu:/wynton/home/zack/tests /path/to/local/destination/
+
+# Your machine to Wynton
+scp -r /path/to/local/directory zack@log1.wynton.ucsf.edu:/wynton/home/zack/
+```
+
+Wohoo! You're are now proficient enough to start using Wynton 😎. We can't wait to see all the cool science you'll do by leverging Wynton!
 
 ## Beyond the basics
 
