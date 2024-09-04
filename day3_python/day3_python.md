@@ -149,3 +149,14 @@ AUGAGCAAAAAGAAAAAGGAGUGGA
 
 Was saved to output_RNA_seq.fa
 ```
+
+
+## For next class:
+- Download Miniconda (if not installed already)
+```shell
+# Downlaod miniconda installer:
+wget -O ./miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+# Then run the installer:
+bash ./miniconda.sh
+```

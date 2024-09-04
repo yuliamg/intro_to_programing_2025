@@ -71,13 +71,3 @@ Walk through day, learning how to use the terminal, and how to use it in VSCode.
 
 ### **If time allows, if not let's do next class:**
 - Download [VSCode](https://code.visualstudio.com)
-- Download Miniconda (if not installed already)
-```shell
-# Downlaod miniconda installer:
-wget -O ./miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-
-# Then run the installer:
-bash ./miniconda.sh
-```
-
-We'll touch more on these downloads next class :)
