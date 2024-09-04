@@ -141,4 +141,5 @@ Given an user input DNA sequence:
 <div align="center">
   <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*SMJejOb3mUJcpV6bwhjnPw.png" alt="one-hot"/>
 </div>
-![[Pasted image 20240903194001.png]]
+
+![one-hot](https://github.com/zackmawaldi/intro_to_programing/blob/main/misc/Pasted%20image%2020240903194001.png)
