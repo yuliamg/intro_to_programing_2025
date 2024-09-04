@@ -282,10 +282,10 @@ The `scp` (secure copy) command allows you to securely transfer files between yo
 To copy a file from Wynton to your local machine, on your local machine, type:
 
 ```sh
-scp zack@dt1.wynton.ucsf.edu:/wynton/home/zack/tests/hello_world.o201 /path/to/local/destination/
+scp zack@dt1.wynton.ucsf.edu:/wynton/home/rotation/zack/tests/hello_world.o201 /path/to/local/destination/
 ```
 
-Replace `zack` with your Wynton username, `/wynton/home/zack/hello_world.o201` of the path of the file on Wynton, and `/path/to/local/destination/` with the path where you want the file to be saved on your local machine. (Note: we are using the data transfer node, `dt1`, rather than `log1` for moving the file. This isn't necessary but is recommended. More on this below.)
+Replace `zack` with your Wynton username, `/wynton/home/rotation/zack/hello_world.o201` of the path of the file on Wynton, and `/path/to/local/destination/` with the path where you want the file to be saved on your local machine. (Note: we are using the data transfer node, `dt1`, rather than `log1` for moving the file. This isn't necessary but is recommended. More on this below.)
 
 
 #### Local Machine → Wynton
@@ -293,10 +293,10 @@ Replace `zack` with your Wynton username, `/wynton/home/zack/hello_world.o201` o
 On your local machine:
 
 ```sh
-scp /path/to/local/file zack@dt1.wynton.ucsf.edu:/wynton/home/zack/
+scp /path/to/local/file zack@dt1.wynton.ucsf.edu:/wynton/home/rotation/zack/
 ```
 
-Replace `/path/to/local/file` with the path to the file on your local machine, and `zack` with your Wynton username. `/wynton/home/zack/` is where the file will land.
+Replace `/path/to/local/file` with the path to the file on your local machine, and `zack` with your Wynton username. `/wynton/home/rotation/zack/` is where the file will land.
 
 
 #### Copying Entire Directories
@@ -305,10 +305,10 @@ To copy entire directories, use the recursive `-r` option with `scp`:
 
 ```sh
 # Wynton to your local machine:
-scp -r zack@dt1.wynton.ucsf.edu:/wynton/home/zack/tests /path/to/local/destination/
+scp -r zack@dt1.wynton.ucsf.edu:/wynton/home/rotation/zack/tests /path/to/local/destination/
 
 # Your machine to Wynton
-scp -r /path/to/local/directory zack@log1.wynton.ucsf.edu:/wynton/home/zack/
+scp -r /path/to/local/directory zack@log1.wynton.ucsf.edu:/wynton/home/rotation/zack/
 ```
 
 Wohoo! You're are now proficient enough to start using Wynton 😎. We can't wait to see all the cool science you'll do by leveraging our beautiful cluster!
