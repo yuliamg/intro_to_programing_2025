@@ -27,7 +27,7 @@ Credit: Most of the information from this page was cobbled together using conten
 Wynton is a **High Performance Computing (HPC) cluster** composed of many interconnected computers (nodes) that collaborate to allow users to execute programs and process large datasets. It is commonly used in research for simulations, analyzing big datasets, or performing tasks that would be too time-consuming on a regular computer. Wynton enables you to leverage the combined power of the entire cluster, making it possible to handle more intensive computational tasks.
 
 ### Getting Started: Creating a Wynton Account
-- [Request or Update an Account](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f) *(Ideally done Day 1 of on-boarding)*
+- [Request or Update an Account](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f) 
 
 If your account request was accepted, you should've received an email that looked liked this:
 ```
