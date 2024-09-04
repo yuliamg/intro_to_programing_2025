@@ -1,4 +1,4 @@
-### 5.5 Defining Your Own Functions
+### 6.1 Defining Your Own Functions
 You can define your own functions using the `def` keyword:
 
 ```python
@@ -9,7 +9,7 @@ def hello():
 print(hello())
 ```
 
-### 5.6 Passing Parameters to Functions
+### 6.2 Passing Parameters to Functions
 Functions can take parameters, allowing them to perform tasks with different inputs:
 
 ```python
@@ -20,7 +20,7 @@ result = add(5, 10)
 print("The result is:", result)
 ```
 
-### 6.4 Dictionaries
+### 7.0 Dictionaries
 Dictionaries store key-value pairs, allowing you to map one item to another:
 
 ```python
@@ -36,11 +36,11 @@ del phonebook['Andrew']  # Removes Andrew's entry
 ```
 
 
-### 7.0 Classes (Object Oriented Programming)
+### 8.0 Classes (Object Oriented Programming)
 
 Classes in Python allow you to group related variables and functions into one entity, making it easier to manage complex programs. Think of a class as a blueprint for creating objects. For example, a `Shape` class could define properties like height and width, and methods (functions) like calculating area and perimeter.
 
-### 7.1 Creating a Class
+### 8.1 Creating a Class
 A class is defined using the `class` keyword:
 
 ```python
@@ -58,7 +58,7 @@ class Shape:
 
 Here, `Shape` is a class with two attributes (`x` and `y`) and two methods (`area` and `perimeter`). The `__init__` method initializes the attributes when an instance of the class is created.
 
-### 7.2 Using a Class
+### 8.2 Using a Class
 To create an object (an instance of the class) and use its methods:
 
 ```python
@@ -69,7 +69,7 @@ print(rectangle.perimeter())  # Output: 290
 
 Each instance of the class (like `rectangle`) is independent and has its own attributes and methods.
 
-### 7.3 Inheritance
+### 8.3 Inheritance
 Inheritance allows a new class to inherit the properties and methods of an existing class. This makes it easy to create a new class with added features without rewriting the existing code.
 
 ```python
@@ -93,3 +93,40 @@ Here, `Square` inherits from `Shape`, and `DoubleSquare` inherits from `Square`,
 - **Attribute**: A variable within a class.
 - **Method**: A function within a class.
 - **Inheritance**: A way to create a new class using details from an existing class.
+
+
+### Exercise: DNA to Amino Acid Converter (`DNA_to_AA.py`)
+#### Task:
+Write a Python script, `DNA_to_AA.py`, that converts a DNA sequence to its corresponding Amino Acid sequence by performing the following steps:
+1. Take user DNA input
+2. Convert a DNA sequence to RNA.
+3. Translate RNA to Amino Acids using a the below dictionary.
+4. Use functions to break down the process.
+5. Output the Amino Acid sequence to the terminal.
+
+RNA to AA dictionary:
+```python
+genetic_code = {
+    'AUG': 'M', 
+    'UUU': 'F', 'UUC': 'F',
+    'UUA': 'L', 'UUG': 'L', 'CUU': 'L', 'CUC': 'L', 'CUA': 'L', 'CUG': 'L',
+    'AUU': 'I', 'AUC': 'I', 'AUA': 'I',
+    'GUU': 'V', 'GUC': 'V', 'GUA': 'V', 'GUG': 'V',
+    'UCU': 'S', 'UCC': 'S', 'UCA': 'S', 'UCG': 'S', 'AGU': 'S', 'AGC': 'S',
+    'CCU': 'P', 'CCC': 'P', 'CCA': 'P', 'CCG': 'P',
+    'ACU': 'T', 'ACC': 'T', 'ACA': 'T', 'ACG': 'T',
+    'GCU': 'A', 'GCC': 'A', 'GCA': 'A', 'GCG': 'A',
+    'UAU': 'Y', 'UAC': 'Y',
+    'CAU': 'H', 'CAC': 'H',
+    'CAA': 'Q', 'CAG': 'Q',
+    'AAU': 'N', 'AAC': 'N',
+    'AAA': 'K', 'AAG': 'K',
+    'GAU': 'D', 'GAC': 'D',
+    'GAA': 'E', 'GAG': 'E',
+    'UGU': 'C', 'UGC': 'C',
+    'UGG': 'W',
+    'CGU': 'R', 'CGC': 'R', 'CGA': 'R', 'CGG': 'R', 'AGA': 'R', 'AGG': 'R',
+    'GGU': 'G', 'GGC': 'G', 'GGA': 'G', 'GGG': 'G',
+    'UAA': 'Stop', 'UAG': 'Stop', 'UGA': 'Stop'
+}
+```
