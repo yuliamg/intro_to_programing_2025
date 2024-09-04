@@ -311,7 +311,7 @@ scp -r zack@dt1.wynton.ucsf.edu:/wynton/home/zack/tests /path/to/local/destinati
 scp -r /path/to/local/directory zack@log1.wynton.ucsf.edu:/wynton/home/zack/
 ```
 
-Wohoo! You're are now proficient enough to start using Wynton 😎. We can't wait to see all the cool science you'll do by leverging Wynton!
+Wohoo! You're are now proficient enough to start using Wynton 😎. We can't wait to see all the cool science you'll do by leveraging our beautiful cluster!
 
 ## Beyond the basics
 
