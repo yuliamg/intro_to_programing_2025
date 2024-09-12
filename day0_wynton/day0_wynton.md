@@ -28,6 +28,7 @@ Wynton is a **High Performance Computing (HPC) cluster** composed of many interc
 
 ### Getting Started: Creating a Wynton Account
 - [Request or Update an Account](https://ucsf.service-now.com/ucsfit?id=ucsf_sc_cat_item&sys_id=68f9651f1bf47c50683e0ed8624bcbac&sysparm_category=40c0305b7b92d000e2dc8180984d4d9f) 
+- *To future session leaders:* Wynton admin prefers if they are given some time to approve accounts. One day notice is too short for them. Ideally have students make an account ~1 week in advance.
 
 If your account request was accepted, you should've received an email that looked liked this:
 ```

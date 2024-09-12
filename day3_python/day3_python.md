@@ -138,6 +138,12 @@ The `open` function supports several modes, determining how the file is handled:
 ## Exercise: DNA to RNA (`transcriber.py`)
 The goal of this program is, given a file input of a DNA sequence file, convert the DNA sequence into and RNA sequence, and output it to both the terminal and as a new file.
 
+In local directory, make sure you have `./my_seq.fa`, where the sequence is:
+```
+>my_seq
+ATGAGCAAAAAGAAAAAGGAGTGGA
+```
+
 Expected behavior:
 ```
 python transcriber.py
@@ -150,12 +156,12 @@ AUGAGCAAAAAGAAAAAGGAGUGGA
 Was saved to output_RNA_seq.fa
 ```
 
-
+Note `transcriber.py` handles invalid sequences --> "Apples" should not be transcribed!
 ## For next class:
 - Download Miniconda (if not installed already)
 ```shell
 # Downlaod miniconda installer:
-wget -O ./miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+curl -o ./miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
 # Then run the installer:
 bash ./miniconda.sh

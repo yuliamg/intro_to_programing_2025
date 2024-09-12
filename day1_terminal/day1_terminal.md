@@ -1,6 +1,6 @@
 ### **Day 1: Terminal Basics**
 
-Walk through day, learning how to use the terminal, and how to use it in VSCode.
+Walk through day, learning how to use the terminal.
 
 1. **Introduction to the Terminal**
    - **What is the Terminal?**
