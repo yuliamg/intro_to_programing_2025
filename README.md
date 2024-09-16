@@ -46,3 +46,5 @@ We will begin with understanding the relationship between the terminal, filesyst
 | **Wednesday** | **09/18/2024** | Pandas + Graphing Day2 | Pandas, dataframe, csv→dataframe, dict→dataframe, dataframe→csv                                                                                                                                                                |
 | **Thursday**  | **09/19/2024** | Buffer day             |                                                                                                                                                                                                                                |
 | **Friday**    | **09/20/2024** | Buffer day             |                                                                                                                                                                                                                                |
+## A good resource for practice:
+edabit.com/challenges/python3
