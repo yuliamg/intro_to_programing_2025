@@ -47,4 +47,4 @@ We will begin with understanding the relationship between the terminal, filesyst
 | **Thursday**  | **09/19/2024** | Buffer day             |                                                                                                                                                                                                                                |
 | **Friday**    | **09/20/2024** | Buffer day             |                                                                                                                                                                                                                                |
 ## A good resource for practice:
-[edabit.com/challenges/python3](https://www.edabit.com/challenges/python3)
+[edabit.com/challenges/python3](https://edabit.com/challenges/python3)
