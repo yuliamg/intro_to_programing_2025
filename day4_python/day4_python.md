@@ -4,7 +4,7 @@ You can define your own functions using the `def` keyword:
 ```python
 def hello():
     print("hello")
-    return 1234
+    # return 1234
 
 print(hello())
 ```
@@ -14,10 +14,42 @@ Functions can take parameters, allowing them to perform tasks with different inp
 
 ```python
 def add(a, b):
+    results = a+b
     return a + b
 
 result = add(5, 10)
 print("The result is:", result)
+```
+
+```python
+def squared(n):
+	n_squared = n*n
+	return n_squared
+```
+
+
+DEMO:
+```python
+def calculator(a, operation, b):
+	a = int(a)
+	b = int(b)
+	
+	if operation == '+':
+		return a + b
+	elif operation == '-':
+		return a - b
+	elif operation == '*':
+		return a * b
+	elif operation == '/':
+		if b == 0:
+			return "Cannot divide by zero!"
+		else:
+			return a / b
+	else:
+		return "Invalid operation"
+
+calc_input = '1+1'
+calculator(calc_input[0], calc_input[1], calc_input[2])
 ```
 
 ### 7.0 Dictionaries
@@ -35,8 +67,63 @@ phonebook['Gingerbread Man'] = 1234567  # Adds a new entry
 del phonebook['Andrew']  # Removes Andrew's entry
 ```
 
+DEMO:
+```python
+def base_counter(sequence):
+	base_freq = {'A':0, 'T':0, 'G':0, 'C':0}
+	for base in sequence:
+		base_freq[base] += 1
+	return base_freq
 
-### 8.0 Classes (Object Oriented Programming)
+seq = input('Input a sequence to count: ')
+
+print(base_counter( seq ))
+```
+
+### Exercise: DNA to Amino Acid Converter (`DNA_to_AA.py`)
+#### Task:
+Write a Python script, `DNA_to_AA.py`, that converts a DNA sequence to its corresponding Amino Acid sequence by performing the following steps:
+1. Take user DNA input
+2. Convert a DNA sequence to RNA.
+3. Translate RNA to Amino Acids using the below dictionary.
+4. Use functions to break down the process.
+5. Output the Amino Acid sequence to the terminal.
+6. Fold the protein! Use [ESMFold](https://esmatlas.com/resources?action=fold) web version.
+
+RNA to AA dictionary:
+```python
+genetic_code = {
+    'AUG': 'M', 
+    'UUU': 'F', 'UUC': 'F',
+    'UUA': 'L', 'UUG': 'L', 'CUU': 'L', 'CUC': 'L', 'CUA': 'L', 'CUG': 'L',
+    'AUU': 'I', 'AUC': 'I', 'AUA': 'I',
+    'GUU': 'V', 'GUC': 'V', 'GUA': 'V', 'GUG': 'V',
+    'UCU': 'S', 'UCC': 'S', 'UCA': 'S', 'UCG': 'S', 'AGU': 'S', 'AGC': 'S',
+    'CCU': 'P', 'CCC': 'P', 'CCA': 'P', 'CCG': 'P',
+    'ACU': 'T', 'ACC': 'T', 'ACA': 'T', 'ACG': 'T',
+    'GCU': 'A', 'GCC': 'A', 'GCA': 'A', 'GCG': 'A',
+    'UAU': 'Y', 'UAC': 'Y',
+    'CAU': 'H', 'CAC': 'H',
+    'CAA': 'Q', 'CAG': 'Q',
+    'AAU': 'N', 'AAC': 'N',
+    'AAA': 'K', 'AAG': 'K',
+    'GAU': 'D', 'GAC': 'D',
+    'GAA': 'E', 'GAG': 'E',
+    'UGU': 'C', 'UGC': 'C',
+    'UGG': 'W',
+    'CGU': 'R', 'CGC': 'R', 'CGA': 'R', 'CGG': 'R', 'AGA': 'R', 'AGG': 'R',
+    'GGU': 'G', 'GGC': 'G', 'GGA': 'G', 'GGG': 'G',
+    'UAA': 'Stop', 'UAG': 'Stop', 'UGA': 'Stop'
+}
+```
+
+Our `mystery_protein.fa`:
+```
+>mystery_protein_seq
+ATGGACAAGGACGAGGCGTGGAAGTGCGTGGAGCAGCTGAGGAGGGAGGGGGCGACGCAGATAGCGTACAGGAGCGACGACTGGAGGGACCTGAAGGAGGCGTGGAAGAAGGGGGCGGACATACTGATAGTGGACGCGACGGACAAGGACGAGGCGTGGAAGCAGGTGGAGCAGCTGAGGAGGGAGGGGGCGACGCAGATAGCGTACAGGAGCGACGACTGGAGGGACCTGAAGGAGGCGTGGAAGAAGGGGGCGGACATACTGATAGTGGACGCGACGGACAAGGACGAGGCGTGGAAGCAGGTGGAGCAGCTGAGGAGGGAGGGGGCGACGCAGATAGCGTACAGGAGCGACGACTGGAGGGACCTGAAGGAGGCGTGGAAGAAGGGGGCGGACATACTGATAGTGGACGCGACGGACAAGGACGAGGCGTGGAAGCAGGTGGAGCAGCTGAGGAGGGAGGGGGCGACGCAGATAGCGTACAGGAGCGACGACTGGAGGGACCTGAAGGAGGCGTGGAAGAAGGGGGCGGACATACTGATATGCGACGCGACGGGGCTGGAGCACCACCACCACCACCAC
+```
+
+%% ### 8.0 Classes (Object Oriented Programming)
 
 Classes in Python allow you to group related variables and functions into one entity, making it easier to manage complex programs. Think of a class as a blueprint for creating objects. For example, a `Shape` class could define properties like height and width, and methods (functions) like calculating area and perimeter.
 
@@ -94,39 +181,4 @@ Here, `Square` inherits from `Shape`, and `DoubleSquare` inherits from `Square`,
 - **Method**: A function within a class.
 - **Inheritance**: A way to create a new class using details from an existing class.
 
-
-### Exercise: DNA to Amino Acid Converter (`DNA_to_AA.py`)
-#### Task:
-Write a Python script, `DNA_to_AA.py`, that converts a DNA sequence to its corresponding Amino Acid sequence by performing the following steps:
-1. Take user DNA input
-2. Convert a DNA sequence to RNA.
-3. Translate RNA to Amino Acids using a the below dictionary.
-4. Use functions to break down the process.
-5. Output the Amino Acid sequence to the terminal.
-
-RNA to AA dictionary:
-```python
-genetic_code = {
-    'AUG': 'M', 
-    'UUU': 'F', 'UUC': 'F',
-    'UUA': 'L', 'UUG': 'L', 'CUU': 'L', 'CUC': 'L', 'CUA': 'L', 'CUG': 'L',
-    'AUU': 'I', 'AUC': 'I', 'AUA': 'I',
-    'GUU': 'V', 'GUC': 'V', 'GUA': 'V', 'GUG': 'V',
-    'UCU': 'S', 'UCC': 'S', 'UCA': 'S', 'UCG': 'S', 'AGU': 'S', 'AGC': 'S',
-    'CCU': 'P', 'CCC': 'P', 'CCA': 'P', 'CCG': 'P',
-    'ACU': 'T', 'ACC': 'T', 'ACA': 'T', 'ACG': 'T',
-    'GCU': 'A', 'GCC': 'A', 'GCA': 'A', 'GCG': 'A',
-    'UAU': 'Y', 'UAC': 'Y',
-    'CAU': 'H', 'CAC': 'H',
-    'CAA': 'Q', 'CAG': 'Q',
-    'AAU': 'N', 'AAC': 'N',
-    'AAA': 'K', 'AAG': 'K',
-    'GAU': 'D', 'GAC': 'D',
-    'GAA': 'E', 'GAG': 'E',
-    'UGU': 'C', 'UGC': 'C',
-    'UGG': 'W',
-    'CGU': 'R', 'CGC': 'R', 'CGA': 'R', 'CGG': 'R', 'AGA': 'R', 'AGG': 'R',
-    'GGU': 'G', 'GGC': 'G', 'GGA': 'G', 'GGG': 'G',
-    'UAA': 'Stop', 'UAG': 'Stop', 'UGA': 'Stop'
-}
-```
+ %%
