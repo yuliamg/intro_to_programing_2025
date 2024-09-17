@@ -47,4 +47,12 @@ We will begin with understanding the relationship between the terminal, filesyst
 | **Thursday**  | **09/19/2024** | Buffer day          |                                                                                                                                                                                                                                |
 | **Friday**    | **09/20/2024** | Buffer day          |                                                                                                                                                                                                                                |
 ## A good resource for practice:
-[edabit.com/challenges/python3](https://edabit.com/challenges/python3)
+- [edabit.com/challenges/python3](https://edabit.com/challenges/python3)
+- From CS50:
+	- [Mario-less](https://cs50.harvard.edu/x/2024/psets/6/mario/less/) (less comfortable) [Mario-more](https://cs50.harvard.edu/x/2024/psets/6/mario/more/) (more comfortable)
+	- [Cash](https://cs50.harvard.edu/x/2024/psets/6/cash/) (less comfortable) [Credit](https://cs50.harvard.edu/x/2024/psets/6/credit/) (more comfortable)
+	- [DNA](https://cs50.harvard.edu/x/2024/psets/6/dna/)
+	- [Readability](https://cs50.harvard.edu/x/2024/psets/6/readability/)
+	- See additional practice under [Week 6](https://cs50.harvard.edu/x/2024/practice/)
+- [Ramachandran plotting](https://drive.google.com/drive/folders/1r0cIcIlYFUqFthzm89bekIo7C9eCRom-)
+
