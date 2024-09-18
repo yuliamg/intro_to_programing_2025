@@ -1,3 +1,53 @@
+#### 0. Setting up a conda environment
+##### Step 1: Install Conda
+```bash
+# Downlaod miniconda installer:
+wget -O ./miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+# Then run the installer:
+bash ./miniconda.sh
+```
+##### Step 2: Create a New Conda Environment
+Once Conda is installed, open your terminal and create a new environment. Let's name the environment `intro_to_prog` and install Python 3.9 or your preferred version.
+
+```bash
+conda create --name intro_to_prog python=3.12
+```
+
+Press `y` when prompted to confirm the installation. This command creates a new isolated environment with Python 3.12.
+
+##### Step 3: Activate the Environment
+Activate the newly created environment to start working in it.
+
+```bash
+conda activate intro_to_prog
+```
+
+To get out, do:
+
+```bash
+conda deactivate
+```
+
+
+You'll notice that the environment name (`intro_to_prog`) appears before the command prompt, indicating that the environment is active.
+
+##### Step 4: Install Numpy and Matplotlib
+Now, let's install `numpy` and `matplotlib` inside this environment using `pip`.
+
+```bash
+pip install numpy matplotlib
+```
+
+##### Step 5: Verify Installation
+To ensure that the packages are installed correctly, you can open a Python shell and try importing the libraries:
+
+```bash
+python
+>>> import numpy as np
+>>> import matplotlib.pyplot as plt
+```
+
 #### 1. Introduction to Numpy Arrays
 
 1.1 **What is an Array?**  
