@@ -1,12 +1,12 @@
 # Introduction to Computing for Biophysicists
 #### (AKA: Intro to Programming / Programming Fundamentals)
-## Fall 2024 Syllabus
+## Fall 2025 Syllabus
 
-**Course Days/Hours:** Sept 10 – 12, 16 – 20 from 9-11AM
+**Course Days/Hours:** Sept 9 – 12, 16 – 19 from 9-11AM
 
 **Location:** GH 227 - Teaching Lab
 
-**Instructor(s):** [Zack Mawaldi](mailto:zack.mawaldi@ucsf.edu)
+**Instructor(s):** [Yulia Gutierrez](mailto:yulia.gutierrez@ucsf.edu)
 
 ## Course Description:
 Computing is as essential as pipetting for success in graduate school. This practical course is intended to ensure that students without any background in scientific computing can become conversant in the fundamentals they need to succeed in our program, including:
@@ -35,17 +35,18 @@ We will begin with understanding the relationship between the terminal, filesyst
 
 | **Day**       | **Date**       | **Theme**           | Concepts                                                                                                                                                                                                                       |
 | ------------- | -------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Wednesday** | **09/04/2024** | Wynton (onboarding) | Terminal basics, ssh, scp, Wynton sign-up / sign-in, SGE, job creation + submission                                                                                                                                            |
-| **Tuesday**   | **09/10/2024** | Terminal            | Quick course intro; terminal basics: pwd, ls, cd, mkdir, touch, cp, mv, rm; text viewing (cat, head, tail); intro to vim; basic piping and redirection (\|, >, >>); simple bash scripting; Miniconda install (if time permits) |
-| **Wednesday** | **09/11/2024** | Python Day1         | Algorithms and algorithmic + programming and Python concepts (writing and running scripts, basic maths, commenting, variables, strings, slicing, user input) + `greeter.py`                                                    |
-| **Thursday**  | **09/12/2024** | Python Day2         | Lists, for and while loops, if, elif, else, boolean expressions, indentation, file handling + `transcriber.py`                                                                                                                 |
-| **Friday**    | **09/13/2024** | ###                 | **BP RETREAT** (no meeting)                                                                                                                                                                                                    |
+| **Monday** | **09/08/2025** | Wynton (onboarding) | Terminal basics, ssh, scp, Wynton sign-up / sign-in, SGE, job creation + submission                                                                                                                                            |
+| **Tuesday**   | **09/09/2025** | Terminal            | Quick course intro; terminal basics: pwd, ls, cd, mkdir, touch, cp, mv, rm; text viewing (cat, head, tail); intro to vim; basic piping and redirection (\|, >, >>); simple bash scripting; Miniconda install (if time permits) |
+| **Wednesday** | **09/10/2025** | Python Day1         | Algorithms and algorithmic + programming and Python concepts (writing and running scripts, basic maths, commenting, variables, strings, slicing, user input) + `greeter.py`                                                    |
+| **Thursday**  | **09/11/2025** | Python Day 2        | Lists, for and while loops, if, elif, else, boolean expressions, indentation, file handling + `transcriber.py`                                                                                                                 |
+| **Friday**    | **09/12/2025** | Python Day 3        | Review, dictionaries, functions
+
 | ###           | ###            | ###                 | ###                                                                                                                                                                                                                            |
-| **Monday**    | **09/16/2024** | Python Day3         | Review, dictionaries, functions                                                                                                                                                                                                |
-| **Tuesday**   | **09/17/2024** | Python Day4         | Mini project (`DNA_to_AA.py`)                                                                                                                                                                                                  |
-| **Wednesday** | **09/18/2024** | Data Science Day    | Jupyter Notebook, arrays, array types, operations, axis, slicing, array visualization, matplotlib, plt, pandas, dataframe, csv→dataframe, dict→dataframe, dataframe→csv                                                        |
-| **Thursday**  | **09/19/2024** | Buffer day          |                                                                                                                                                                                                                                |
-| **Friday**    | **09/20/2024** | Buffer day          |                                                                                                                                                                                                                                |
+| **Monday**    | **09/15/2025** | ###                 | **BP RETREAT** (no meeting)                                                                                                                                                                                                    |                                                                                                                                                                                                
+| **Tuesday**   | **09/16/2025** | Python Day 4        | Mini project (`DNA_to_AA.py`)                                                                                                                                                                                                  |
+| **Wednesday** | **09/17/2025** | Data Science Day    | Jupyter Notebook, arrays, array types, operations, axis, slicing, array visualization, matplotlib, plt, pandas, dataframe, csv→dataframe, dict→dataframe, dataframe→csv                                                        |
+| **Thursday**  | **09/18/2025** | Buffer day          |                                                                                                                                                                                                                                |
+| **Friday**    | **09/19/2025** | Buffer day          |                                                                                                                                                                                                                                |
 ## A good resource for practice:
 - [edabit.com/challenges/python3](https://edabit.com/challenges/python3)
 - From CS50:
