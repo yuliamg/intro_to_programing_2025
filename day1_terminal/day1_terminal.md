@@ -47,6 +47,7 @@ Walk through day, learning how to use the terminal.
    - **Introduction to vim**
 	   - Opening a file in vim. `vim file.txt`
 	   - Basic navigation in vim (insert mode, normal mode).
+      		- Change to insert mode `i`, revert to normal mode from insert mode `ESC` key
 	   - Saving (`:w`), exiting (`:q`), and save and exit in vim (`:wq`). Forceful action with `!` ex: `:q!`
 
 5. **Piping and Redirection**
@@ -54,7 +55,7 @@ Walk through day, learning how to use the terminal.
      - Combine commands using the pipe symbol to send the output of one command as input to another (e.g., `ls | grep "txt"` or `ls | wc -l`).
    - **Redirection (`>`, `>>`)**
      - Redirecting command output to a file:
-       - `>`: Overwrite a file with the command output.
+       - `>`: Overwrite a file with the command output. (e.g., `readlink -f *.pdb > pdb_list.txt`)
        - `>>`: Append command output to the end of a file.
 
 6. **Scripting Basics**
@@ -66,7 +67,7 @@ Walk through day, learning how to use the terminal.
      - `#!/bin/bash`
    - **Running the Bash Script**
      - Execute the script from the terminal.
-
+     - Interrupt terminal execultion by using `Control + c`
 
 
 ### **If time allows, if not let's do next class:**
