@@ -96,7 +96,7 @@ print(sentence)
 ```
 
 #### String Manipulation
-You can manipulate strings in various ways:
+You can manipulate strings in various ways. The general format is `string[start:stop:step]`
 
 ```python
 text = "abcdefghij"
